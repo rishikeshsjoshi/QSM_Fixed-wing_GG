@@ -55,6 +55,6 @@ function [c, ceq] = optConstraints(i,inputs)
   ceq(1,0*inputs.numDeltaLelems+1:1*inputs.numDeltaLelems) = (outputs.E_result(i,:) - outputs.E(i,:));
 
   % Glide ratio during reel-in
-  ceq(1,1*inputs.numDeltaLelems+1:2*inputs.numDeltaLelems) = (outputs.E_result_i(i,:) - outputs.E_i(i,:));
+%   ceq(1,1*inputs.numDeltaLelems+1:2*inputs.numDeltaLelems) = (outputs.E_result_i(i,:) - outputs.E_i(i,:));
 
 end

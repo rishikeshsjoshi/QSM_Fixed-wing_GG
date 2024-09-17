@@ -55,7 +55,8 @@ function computePower(i,inputs)
     outputs.chi(i,j)   = pi()/2;
 
     % Effective CD
-    outputs.CD_k(i,j)   = inputs.Cd0 + (outputs.CL(i,j)-inputs.Cl0_airfoil)^2/(pi()*inputs.AR*inputs.e);
+%     outputs.CD_k(i,j)   = inputs.Cd0 + (outputs.CL(i,j)-inputs.Cl0_airfoil)^2/(pi()*inputs.AR*inputs.e);
+    outputs.CD_k(i,j)   = 0.004 + (outputs.CL(i,j))^2*(0.008+ 1/(pi()*inputs.AR));
     outputs.CD_t(i,j)   = (1/4)*inputs.Cd_c*outputs.d_t*outputs.l_t_inCycle(i,j)/inputs.S;
     outputs.CD(i,j)     = outputs.CD_k(i,j) + outputs.CD_t(i,j);
 

@@ -22,7 +22,8 @@ CL(CL < -Cl_maxAirfoil) = -Cl_maxAirfoil;
 % CD = Cd0 + ((CL - Cl0_airfoil).^2) / (pi * AR * e);
 
 % Considering Tether drag for a 500m long tether
-CD = Cd0 + ((CL - Cl0_airfoil).^2) / (pi * AR * e) + (1/4)*1.2*0.0087*600/12;
+CD = Cd0 + ((CL - Cl0_airfoil).^2) / (pi * AR * e) + (1/4)*1.2*0.0087*600/24;
+% CD = 0.004 + (CL).^2*(0.008+ 1/(pi()*AR)) + (1/4)*1.2*0.0087*600/24;
 
 
 % Plot CL-alpha curve

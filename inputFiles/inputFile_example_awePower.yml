@@ -2,12 +2,12 @@ name: 'inputFile_example_awePower'  # Input file name
 
 # Model Settings
 numDeltaLelems: 5  # Number of stroke length elements [num]
-FgToggle: 1  # Gravity toggle: 1 = True,  0 = False
+FgToggle: 0  # Gravity toggle: 1 = True,  0 = False
 vertWindProfile: 0  # Vertical wind profile: 0 = Modelled, 1 = From dataset
 givenOstwaldEff: 1 # Ostwald efficiency factor: 0 = Function of AR (Anderson book), 1 = Given 
 
 # Wind Parameters
-vw_ref: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]  # Reference wind speeds [m/s]
+vw_ref: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # Reference wind speeds [m/s]
 h_ref: 100  # Reference height [m]
 windShearExp: 0.143  # Wind shear exponent [-] (0.143 over land, 0.11 over sea)
 
@@ -24,7 +24,7 @@ windProfile_vw: 'v_windDataset_Cabauw'
 
 # System Parameters
 S: 12  # Wing surface area [m^2]
-AR: 12  # Aspect ratio [-]
+AR: 18  # Aspect ratio [-]
 P_ratedElec: 150000  # Rated electrical power [W]
 massOverride: 0  # Mass override toggle
 kiteMass: 600  # (Overridden) Kite mass [kg]
@@ -41,7 +41,7 @@ Te_matDensity: 980  # Tether material density [kg/m^3]
 
 # Aerodynamic Parameters
 Cl_maxAirfoil: 2.5  # Maximum lift coefficient of airfoil [-]
-Cl_eff_F: 0.8  # Effective lift coefficient factor [-]
+Cl_eff_F: 1.0  # Effective lift coefficient factor [-]
 Cl0_airfoil: 0.65  # Zero-lift coefficient of airfoil [-]
 e: 0.6  # Oswald efficiency factor [-]
 Cd0: 0.056  # Zero-lift drag coefficient [-]
